@@ -1,0 +1,24 @@
+<app-search></app-search>
+<app-input-db></app-input-db>
+<ul>
+    <li *ngFor="let part of parts">
+        <a routerLink="/food/{{part.id}}">
+            <img src="{{part.imgUrl}}" alt="">
+            <div class="content">
+                <div class="name">
+                    {{part.name}}
+                </div>
+                <span class="favorite {{part.favorite?'':'not'}}">
+                    💗
+                </span>
+                <div class="stars">
+                </div>
+                <div class="price">
+                    <span>
+                        {{part.price|currency}}
+                    </span>
+                </div>
+            </div>
+        </a>
+    </li>
+</ul>
